@@ -2,4 +2,37 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  background: #000;
+}
+
+.color-grid {
+  display: grid;
+  margin: 20px;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  grid-auto-rows: 200px;
+  grid-gap: 20px;
+}
+
+.color-track-red {
+  background: #EE4D4D;
+}
+
+.color-track-pink {
+  background: #FF4794;
+}
+
+.color-track-orange {
+  background: #EE904D;
+}
+
+.color-track-yellow {
+  background: #EBEE4D;
+}
+
+.color-track-green {
+  background: #92F76F;
+}
+
+.color-track-blue {
+  background: #5CA0F0;
 }
