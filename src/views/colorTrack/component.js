@@ -15,6 +15,6 @@ export default function () {
     }
 
     return (
-        <div className={'color-track-' + getRandomColor()} />
+        <div className={'color-track color-track-' + getRandomColor()} />
     );
 }

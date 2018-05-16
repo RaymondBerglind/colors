@@ -2,7 +2,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  background: #000;
+  background: #58678C;
 }
 
 .color-grid {
@@ -13,7 +13,14 @@ body {
   grid-gap: 20px;
 }
 
+.color-track {
+  box-shadow: 0 3px 10px #000;
+}
+
 .color-track-red {
+  background: #EE4D4D;
+}
+.color-track-red :hover {
   background: #EE4D4D;
 }
 
