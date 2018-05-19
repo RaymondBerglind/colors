@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function () {
+export default function (props) {
     const colors = [
         'red',
         'pink',
@@ -15,6 +15,6 @@ export default function () {
     }
 
     return (
-        <div className={'color-track color-track-' + getRandomColor()} />
+        <div className={'color-track color-track-' + getRandomColor() + ' ' + props.sizeClass} />
     );
 }

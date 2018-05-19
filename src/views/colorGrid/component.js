@@ -5,7 +5,7 @@ export default class colorGrid extends React.Component {
     constructor(props) {
         super(props);
         this.colorGrid = React.createRef();
-        this.state = {colorTracks: 6*40}
+        this.state = {colorTracks: 6*40} // Magic number
     }
 
     componentDidMount() {
@@ -17,7 +17,7 @@ export default class colorGrid extends React.Component {
             var scrolledToBottom = Math.ceil(scrollTop + clientHeight) >= scrollHeight;
             
             if (scrolledToBottom) {
-                thisComponent.setState(prevState => ({ colorTracks: prevState.colorTracks + 6}));
+                thisComponent.setState(prevState => ({ colorTracks: prevState.colorTracks + 6 }));
             }
         });
     }
@@ -26,11 +26,22 @@ export default class colorGrid extends React.Component {
         window.removeEventListener('scroll');
     }
 
+    getSizeClass() {
+        var sizeClasses = [
+            'color-track-col',
+            'color-track-row',
+            'color-track-square',
+            ''
+        ];
+
+        return sizeClasses[Math.ceil(Math.random() * (sizeClasses.length - 1))];
+    }
+
     getColorTracks() {
         var numTracks = this.state.colorTracks;
         var tracks = [];
         for (var i = 0; i < numTracks; i++) {
-            tracks.push(<ColorTrack key={i} />);
+            tracks.push(<ColorTrack key={i}  sizeClass={this.getSizeClass()}/>);
         }
         return tracks;
     }
