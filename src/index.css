@@ -15,6 +15,12 @@ body {
 
 .color-track {
   box-shadow: 0 3px 10px #000;
+  transition: all 0.2s ease;
+}
+
+.color-track:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px #000;
 }
 
 .color-track-red {
